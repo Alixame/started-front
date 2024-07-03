@@ -1,5 +1,10 @@
 {
     "Index": {
         "title": "Hello world!"
+    },
+    "Theme": {
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
     }
 }

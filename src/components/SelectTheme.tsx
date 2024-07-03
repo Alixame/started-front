@@ -1,9 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { useTheme } from "next-themes"
 
 import { Button } from "@/components/ui/button"
+
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -11,8 +11,14 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
+import { useTheme } from "next-themes"
+
+import { useTranslations } from "next-intl"
+
 export function SelectTheme() {
     const { setTheme } = useTheme()
+
+    const t = useTranslations('Theme');
 
     return (
         <DropdownMenu>
@@ -26,15 +32,15 @@ export function SelectTheme() {
 
             <DropdownMenuContent align="end">
                 <DropdownMenuItem onClick={() => setTheme("light")}>
-                    Light
+                    {t('light')}
                 </DropdownMenuItem>
 
                 <DropdownMenuItem onClick={() => setTheme("dark")}>
-                    Dark
+                    {t('dark')}
                 </DropdownMenuItem>
-                
+
                 <DropdownMenuItem onClick={() => setTheme("system")}>
-                    System
+                    {t('system')}
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
