@@ -13,25 +13,29 @@ import {
 
 import { languages } from '@/languages';
 
+import { getCookieLocale, setCookieLocale } from '@/lib/locale';
+
 const SelectLocale = () => {
     const [locale, setLocale] = useState('pt');
+
     const router = useRouter();
 
-    useEffect(() => {
-        const currentLocale = document.cookie
-            .split('; ')
-            .find(row => row.startsWith('locale='))
-            ?.split('=')[1];
+    const handleLocale = async () => {
+        const currentLocale = await getCookieLocale()
 
         if (currentLocale) {
-            setLocale(currentLocale);
+            setLocale(currentLocale.value);
         }
+    };
+
+    useEffect(() => {
+        handleLocale();
     }, []);
 
     const handleLocaleChange = (newLocale: string) => {
         setLocale(newLocale);
 
-        document.cookie = `locale=${newLocale}; path=/`;
+        setCookieLocale(newLocale)
 
         router.refresh();
     };
