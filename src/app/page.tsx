@@ -1,5 +1,7 @@
+import { BaseModal } from "@/components/BaseModal";
 import SelectLocale from "@/components/SelectLocale";
 import { SelectTheme } from "@/components/SelectTheme";
+import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 
 export default function Home() {
@@ -16,6 +18,16 @@ export default function Home() {
 
                 <SelectLocale />
             </div>
+
+            <BaseModal
+                title="Titulo da Modal"
+                description="Descrição da Modal"
+                trigger={
+                    <Button variant="outline" className="mt-3">Teste</Button>
+                }
+            >
+                oi
+            </BaseModal>
         </main>
     );
 }
