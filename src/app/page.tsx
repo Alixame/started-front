@@ -20,13 +20,15 @@ export default function Home() {
             </div>
 
             <BaseModal
-                title="Titulo da Modal"
-                description="Descrição da Modal"
+                title={t("Titulo da Modal")}
+                description={t("Descrição da Modal")}
                 trigger={
-                    <Button variant="outline" className="mt-3">Teste</Button>
+                    <Button variant="outline" className="mt-3">
+                        {t("Abrir Modal")}
+                    </Button>
                 }
             >
-                oi
+                <p>{t("Conteúdo da Modal")}</p>
             </BaseModal>
         </main>
     );

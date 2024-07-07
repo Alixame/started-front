@@ -1,6 +1,10 @@
 {
     "Index": {
-        "title": "Ola mundo!"
+        "title": "Ola mundo!",
+        "Titulo da Modal": "Titulo da Modal",
+        "Descrição da Modal": "Descrição da Modal",
+        "Conteúdo da Modal": "Conteúdo da Modal",
+        "Abrir Modal": "Abrir Modal"
     },
     "Theme": {
         "light": "Claro",
