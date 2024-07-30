@@ -4,7 +4,11 @@ import withPWA from 'next-pwa';
 const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images: {
+        domains: ['avatars.githubusercontent.com'],
+    },
+};
 
 export default withPWA({
     dest: 'public',
