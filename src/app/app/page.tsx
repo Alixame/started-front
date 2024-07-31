@@ -1,17 +1,12 @@
-import { CommandMenu } from '@/components/CommandMenu'
 import SearchMenu from '@/components/SearchMenu'
 import SelectLocale from '@/components/SelectLocale'
 import { SelectTheme } from '@/components/SelectTheme'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card'
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
+import { Card, CardDescription, CardTitle } from '@/components/ui/card'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
-import { Input } from '@/components/ui/input'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { CircleUser, Command, FileInput, FilePlus, Menu, Package2, Plus, Search } from 'lucide-react'
+import { FileInput } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export default function AppPage() {
     const t = useTranslations('Index')
